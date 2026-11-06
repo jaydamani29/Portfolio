@@ -1,0 +1,32 @@
+# Refreshes data/leetcode-data.js from LeetCode once a day and commits the result.
+# Needs: repo Settings > Actions > General > Workflow permissions = "Read and write".
+name: Update LeetCode stats
+
+on:
+  schedule:
+    - cron: '30 18 * * *'   # 00:00 IST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/update-leetcode.mjs
+      - name: Commit if changed
+        run: |
+          if git diff --quiet; then
+            echo "No changes."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/leetcode-data.js
+            git commit -m "chore: update LeetCode stats"
+            git push
+          fi

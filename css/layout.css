@@ -1,0 +1,110 @@
+/* Page-level layout: nav, hero, stats strip, about, contact, footer */
+
+/* ===== Nav ===== */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  height: var(--nav-h);
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0 8%;
+  background: rgba(14, 17, 22, 0.85);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.logo { font-weight: 700; letter-spacing: 0.02em; }
+.logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 28px; }
+.nav-links a { color: var(--muted); font-size: 0.95rem; transition: color .2s; }
+.nav-links a:hover { color: var(--text); }
+
+.nav-toggle { display: none; width: 40px; height: 40px; border-radius: 10px; }
+.nav-toggle span,
+.nav-toggle span::before,
+.nav-toggle span::after {
+  content: ""; display: block; width: 20px; height: 2px; background: var(--text);
+  border-radius: 2px; margin: 0 auto; position: relative;
+  transition: transform .25s var(--ease), background .2s;
+}
+.nav-toggle span::before { position: absolute; top: -6px; left: 0; }
+.nav-toggle span::after { position: absolute; top: 6px; left: 0; }
+.nav.is-open .nav-toggle span { background: transparent; }
+.nav.is-open .nav-toggle span::before { transform: translateY(6px) rotate(45deg); }
+.nav.is-open .nav-toggle span::after { transform: translateY(-6px) rotate(-45deg); }
+
+/* ===== Hero ===== */
+.hero {
+  min-height: 100vh;
+  display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px;
+  align-items: center;
+  padding-top: calc(var(--nav-h) + 56px);
+}
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 14px; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent);
+  font-size: 0.85rem; font-weight: 600; margin-bottom: 22px;
+}
+.hero-tag::before {
+  content: ""; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent); box-shadow: 0 0 10px var(--accent);
+}
+.hero h1 {
+  font-size: clamp(3rem, 8vw, 5.6rem); line-height: 1; letter-spacing: -0.03em;
+  margin-bottom: 20px;
+}
+.hero h1 .line { display: block; overflow: hidden; padding-bottom: 0.08em; }
+.hero h1 .line > span { display: inline-block; }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.hero .role { font-size: 1.15rem; color: var(--muted); margin-bottom: 32px; max-width: 520px; }
+.hero .cta { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* Photo: transparent cutout that pops out of a rounded frame */
+.photo-wrap { position: relative; justify-self: center; width: min(440px, 92%); aspect-ratio: 1; }
+.photo-frame {
+  position: absolute; left: 4%; right: 4%; bottom: 0; top: 24%;
+  border-radius: 28px;
+  background: linear-gradient(160deg, rgba(44,187,93,.22), rgba(44,187,93,.05) 60%);
+  border: 1px solid rgba(44,187,93,.35);
+}
+.photo-wrap img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: contain; object-position: center bottom;
+  filter: drop-shadow(0 18px 28px rgba(0,0,0,.45));
+}
+.photo-badge {
+  position: absolute; left: -8px; bottom: 28px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 14px; padding: 12px 16px; font-size: 0.85rem; color: var(--muted);
+}
+.photo-badge strong { display: block; color: var(--accent); font-size: 1.3rem; line-height: 1.2; }
+
+/* ===== Stats strip ===== */
+.stats {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+  padding: 0 8%; margin-top: -40px; position: relative; z-index: 2;
+}
+.stat {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px; text-align: center;
+}
+.stat .num { font-size: 2.2rem; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; line-height: 1.2; }
+.stat .label { color: var(--muted); font-size: 0.9rem; }
+
+/* ===== About ===== */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.about-copy p { color: var(--muted); font-size: 1.05rem; }
+.about-copy p + p { margin-top: 16px; }
+.about-copy strong { color: var(--text); }
+.traits { display: grid; gap: 14px; }
+
+/* ===== DSA section background ===== */
+.dsa { background: linear-gradient(180deg, var(--bg), var(--bg-deep) 60%, var(--bg)); }
+
+/* ===== Contact + footer ===== */
+.contact { text-align: center; }
+.contact .lead { margin: 0 auto 28px; }
+.contact-links { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+.footer {
+  text-align: center; color: var(--muted); font-size: 0.85rem;
+  padding: 32px 8%; border-top: 1px solid var(--border);
+}

@@ -1,0 +1,35 @@
+/* Design tokens: "Midnight Terminal" palette. Change colors here only. */
+:root {
+  color-scheme: dark;
+
+  --bg: #0e1116;
+  --bg-deep: #0b0e13;
+  --surface: #161b22;
+  --surface-2: #1c2230;
+  --border: #262e3b;
+  --text: #e6edf3;
+  --muted: #8b949e;
+
+  --accent: #2cbb5d;
+  --accent-strong: #3fd672;
+  --accent-ink: #04140a;
+  --accent-soft: rgba(44, 187, 93, 0.15);
+
+  --easy: #2dd4bf;
+  --medium: #ffb800;
+  --hard: #ff4d4d;
+
+  /* Heatmap levels (0 = no submissions) */
+  --heat-0: #1e2633;
+  --heat-1: #0e4429;
+  --heat-2: #006d32;
+  --heat-3: #26a641;
+  --heat-4: #39d353;
+
+  --radius: 14px;
+  --radius-lg: 20px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --nav-h: 64px;
+
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}

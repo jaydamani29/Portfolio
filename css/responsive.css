@@ -1,0 +1,38 @@
+/* Breakpoints (kept last so they win over component rules) */
+
+@media (max-width: 900px) {
+  section { padding: 72px 6%; }
+
+  .nav { padding: 0 6%; }
+  .nav-toggle { display: block; }
+  .nav-links {
+    position: absolute; top: var(--nav-h); left: 0; right: 0;
+    flex-direction: column; gap: 0; padding: 8px 6% 16px;
+    background: rgba(14, 17, 22, 0.97); border-bottom: 1px solid var(--border);
+    transform: translateY(-8px); opacity: 0; visibility: hidden;
+    transition: opacity .2s, transform .2s, visibility .2s;
+  }
+  .nav.is-open .nav-links { opacity: 1; transform: none; visibility: visible; }
+  .nav-links a { display: block; padding: 12px 0; font-size: 1.05rem; }
+
+  .hero { grid-template-columns: 1fr; text-align: center; min-height: auto; padding-bottom: 72px; gap: 32px; }
+  .hero .cta { justify-content: center; }
+  .hero-tag { margin-left: auto; margin-right: auto; }
+  .hero .role { margin-left: auto; margin-right: auto; }
+  .photo-wrap { order: -1; width: min(320px, 82%); }
+  .photo-badge { left: 0; }
+
+  .stats { grid-template-columns: repeat(2, 1fr); margin-top: 0; }
+  /* minmax(0, 1fr) lets wide children (the heatmap) shrink and scroll instead of stretching the page */
+  .about-grid, .lc-top, .project-grid { grid-template-columns: minmax(0, 1fr); }
+  .solved { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .done-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 520px) {
+  .done-grid { grid-template-columns: 1fr; }
+  .diff { gap: 8px; }
+  .diff span { font-size: 0.95rem; }
+  .lc-card { padding: 20px; }
+  .heat-legend { justify-content: flex-start; }
+}

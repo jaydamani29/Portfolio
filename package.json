@@ -1,0 +1,12 @@
+{
+  "name": "jay-damani-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal portfolio site (static HTML, CSS and JavaScript)",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "update:leetcode": "node scripts/update-leetcode.mjs",
+    "test": "node --test tests/logic.test.mjs"
+  },
+  "engines": { "node": ">=18" }
+}
