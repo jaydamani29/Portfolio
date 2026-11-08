@@ -3,24 +3,24 @@ window.LEETCODE_DATA = {
   "username": "Jay_Damani",
   "profileUrl": "https://leetcode.com/u/Jay_Damani/",
   "meta": {
-    "asOf": "2026-11-07",
+    "asOf": "2026-11-08",
     "estimated": false,
     "note": "Synced from LeetCode."
   },
   "solved": {
     "total": 239,
-    "totalQuestions": 4105,
+    "totalQuestions": 4109,
     "easy": {
       "solved": 115,
       "total": 975
     },
     "medium": {
       "solved": 84,
-      "total": 2142
+      "total": 2145
     },
     "hard": {
       "solved": 40,
-      "total": 988
+      "total": 989
     }
   },
   "badge": "50 Days Badge 2026",
