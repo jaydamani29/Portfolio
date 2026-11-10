@@ -9,14 +9,14 @@ window.LEETCODE_DATA = {
   },
   "solved": {
     "total": 239,
-    "totalQuestions": 4109,
+    "totalQuestions": 4110,
     "easy": {
       "solved": 115,
       "total": 975
     },
     "medium": {
       "solved": 84,
-      "total": 2145
+      "total": 2146
     },
     "hard": {
       "solved": 40,
