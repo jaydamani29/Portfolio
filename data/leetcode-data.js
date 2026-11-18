@@ -3,13 +3,13 @@ window.LEETCODE_DATA = {
   "username": "Jay_Damani",
   "profileUrl": "https://leetcode.com/u/Jay_Damani/",
   "meta": {
-    "asOf": "2026-11-17",
+    "asOf": "2026-11-18",
     "estimated": false,
     "note": "Synced from LeetCode."
   },
   "solved": {
     "total": 240,
-    "totalQuestions": 4114,
+    "totalQuestions": 4115,
     "easy": {
       "solved": 116,
       "total": 976
@@ -20,7 +20,7 @@ window.LEETCODE_DATA = {
     },
     "hard": {
       "solved": 40,
-      "total": 990
+      "total": 991
     }
   },
   "badge": "50 Days Badge 2026",
