@@ -3,7 +3,7 @@ window.LEETCODE_DATA = {
   "username": "Jay_Damani",
   "profileUrl": "https://leetcode.com/u/Jay_Damani/",
   "meta": {
-    "asOf": "2026-11-18",
+    "asOf": "2026-11-19",
     "estimated": false,
     "note": "Synced from LeetCode."
   },
