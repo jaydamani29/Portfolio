@@ -9,18 +9,18 @@ window.LEETCODE_DATA = {
   },
   "solved": {
     "total": 240,
-    "totalQuestions": 4115,
+    "totalQuestions": 4119,
     "easy": {
       "solved": 116,
-      "total": 976
+      "total": 977
     },
     "medium": {
       "solved": 84,
-      "total": 2148
+      "total": 2150
     },
     "hard": {
       "solved": 40,
-      "total": 991
+      "total": 992
     }
   },
   "badge": "50 Days Badge 2026",
