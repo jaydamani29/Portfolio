@@ -3,15 +3,15 @@ window.LEETCODE_DATA = {
   "username": "Jay_Damani",
   "profileUrl": "https://leetcode.com/u/Jay_Damani/",
   "meta": {
-    "asOf": "2026-11-24",
+    "asOf": "2026-11-25",
     "estimated": false,
     "note": "Synced from LeetCode."
   },
   "solved": {
-    "total": 240,
-    "totalQuestions": 4123,
+    "total": 241,
+    "totalQuestions": 4124,
     "easy": {
-      "solved": 116,
+      "solved": 117,
       "total": 978
     },
     "medium": {
@@ -20,7 +20,7 @@ window.LEETCODE_DATA = {
     },
     "hard": {
       "solved": 40,
-      "total": 993
+      "total": 994
     }
   },
   "badge": "50 Days Badge 2026",
@@ -97,6 +97,7 @@ window.LEETCODE_DATA = {
     "2026-07-14": 1,
     "2026-07-15": 1,
     "2026-10-26": 1,
-    "2026-11-13": 1
+    "2026-11-13": 1,
+    "2026-11-24": 1
   }
 };
